@@ -130,7 +130,6 @@ For more, [R Journal](http://journal.r-project.org/archive/2012-2/RJournal_2012-
 
 
 ```{r}
-#Median
 args(median)
 median(1:100)
 ```
@@ -139,7 +138,6 @@ median(1:100)
 
 ## A few examples
 ```{r}
-#t.test
 args(t.test)
 t.test(rnorm(100),rnorm(100,10,1),mu=0)
 ```
@@ -164,8 +162,7 @@ my_function("Hello World!!")
 
 1. Create some data
 2. Look at help for `lm()`
-3. run model
-4. Try `summary()` to get more info out of your `lm()`
+3. Try `summary()` to get more info out of your `lm()`
 
 ## Excercise
 Write a function that has two vectors of the same length as input, and returns 
@@ -177,14 +174,53 @@ place
 get_r2<-function(...){
   xlm<-lm(...)
   xlm_summary<-summary(...)
-  # hint str(xlm_summary) will give you lots of useful info
-  return(...)
+  return(...) # hint str(xlm_summary) will give you lots of useful info
 }
 ```
 
---- 
+--- &twocol w1:40% w2:50%
 
 ## Creating your own packages
 
+***=left
+- Why?
+ - You have developed a new method
+ - Share code for a published paper
+ - Keep your own code organized
+> - When?
+ - A method is finalized
+ - Paper is published
+ - Anytime you have more than one related function
+> - How?
 
+***=right
+![Steve Package](http://media.giphy.com/media/9xfrrhLlYOeNq/giphy.gif)
 
+---
+
+## How do you create your own package?
+
+- Many tutorials out there
+ - Hadley Wickham - [http://r-pkgs.had.co.nz/](http://r-pkgs.had.co.nz/)
+ - Hilary Parker - [http://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/](http://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/)
+ - Karl Broman - [http://kbroman.org/pkg_primer/](http://kbroman.org/pkg_primer/)
+ 
+- But, the very basics are
+ - Structure
+ - Documentation
+ - `DESCRIPTION` File
+  
+---
+
+## Create the Structure
+
+---
+
+## Create the Documentation
+
+---
+
+## Fill out `DESCRIPTION`
+
+ 
+  

@@ -160,29 +160,6 @@ format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pd
   </article>
 </slide>
 
-<slide class="" id="slide-4" style="background:;">
-  <hgroup>
-    <h2>Managing Packages</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
-<li>listing: <code>installed.packages()</code></li>
-<li>available from current repository: <code>available.packages()</code></li>
-<li>install: <code>install.packages()</code></li>
-<li>remove: <code>remove.packages()</code></li>
-<li>update: <code>update.packages()</code></li>
-<li>loading: <code>library()</code> 
-
-<ul>
-<li>note: see <a href="http://yihui.name/en/2014/07/library-vs-require/">Yihui Xie&#39;s post</a> on <code>library</code> not <code>require</code></li>
-</ul></li>
-<li>help: <code>help(package=&quot;package_name&quot;)</code></li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
 <slide class="" id="">
   <hgroup>
     <h2>Finding New Packages</h2>
@@ -210,7 +187,7 @@ format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pd
   </article>
 </slide>
 
-<slide class="" id="slide-6" style="background:;">
+<slide class="" id="slide-5" style="background:;">
   <hgroup>
     <h2>Finding New Packages</h2>
   </hgroup>
@@ -230,7 +207,7 @@ format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pd
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-7" style="background:;">
+<slide class="" id="slide-6" style="background:;">
   <hgroup>
     <h2>Finding New Packages</h2>
   </hgroup>
@@ -246,6 +223,29 @@ format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pd
 <li>Twitter, #rstats (<a href="https://twitter.com/search?q=%23rstats">https://twitter.com/</a>)</li>
 <li>R Bloggers (<a href="http://www.r-bloggers.com/">http://www.r-bloggers.com/</a>)</li>
 </ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Managing Packages</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>listing: <code>installed.packages()</code></li>
+<li>available from current repository: <code>available.packages()</code></li>
+<li>install: <code>install.packages()</code></li>
+<li>remove: <code>remove.packages()</code></li>
+<li>update: <code>update.packages()</code></li>
+<li>loading: <code>library()</code> 
+
+<ul>
+<li>note: see <a href="http://yihui.name/en/2014/07/library-vs-require/">Yihui Xie&#39;s post</a> on <code>library</code> not <code>require</code></li>
+</ul></li>
+<li>help: <code>help(package=&quot;package_name&quot;)</code></li>
 </ul>
 
   </article>
@@ -302,8 +302,7 @@ format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pd
     <h2>A few examples</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">#Median
-args(median)
+    <pre><code class="r">args(median)
 </code></pre>
 
 <pre><code>## function (x, na.rm = FALSE) 
@@ -325,8 +324,7 @@ args(median)
     <h2>A few examples</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">#t.test
-args(t.test)
+    <pre><code class="r">args(t.test)
 </code></pre>
 
 <pre><code>## function (x, ...) 
@@ -383,7 +381,6 @@ my_function(&quot;Hello World!!&quot;)
     <ol>
 <li>Create some data</li>
 <li>Look at help for <code>lm()</code></li>
-<li>run model</li>
 <li>Try <code>summary()</code> to get more info out of your <code>lm()</code></li>
 </ol>
 
@@ -397,11 +394,91 @@ place</p>
 get_r2&lt;-function(...){
   xlm&lt;-lm(...)
   xlm_summary&lt;-summary(...)
-  # hint str(xlm_summary) will give you lots of useful info
-  return(...)
+  return(...) # hint str(xlm_summary) will give you lots of useful info
 }
 </code></pre>
 
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="">
+  <hgroup>
+    <h2>Creating your own packages</h2>
+    <br/>
+  </hgroup>
+  <article>
+      
+    <div class='left' style='float:left;width:40%'>
+      <ul>
+<li>Why?
+
+<ul>
+<li>You have developed a new method</li>
+<li>Share code for a published paper</li>
+<li>Keep your own code organized
+&gt; - When?</li>
+<li>A method is finalized</li>
+<li>Paper is published</li>
+<li>Anytime you have more than one related function
+&gt; - How?</li>
+</ul></li>
+</ul>
+
+    </div>    
+    <div class='right' style='float:right;width:50%'>
+      <p><img src="http://media.giphy.com/media/9xfrrhLlYOeNq/giphy.gif" alt="Steve Package"></p>
+
+    </div>
+  </article>
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>How do you create your own package?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Many tutorials out there</p>
+
+<ul>
+<li>Hadley Wickham - <a href="http://r-pkgs.had.co.nz/">http://r-pkgs.had.co.nz/</a></li>
+<li>Hilary Parker - <a href="http://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/">http://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/</a></li>
+<li>Karl Broman - <a href="http://kbroman.org/pkg_primer/">http://kbroman.org/pkg_primer/</a></li>
+</ul></li>
+<li><p>But, the very basics are</p>
+
+<ul>
+<li>Structure</li>
+<li>Documentation</li>
+<li><code>DESCRIPTION</code> File</li>
+</ul></li>
+</ul>
+
+<hr>
+
+<h2>Create the Structure</h2>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Create the Documentation</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Fill out <code>DESCRIPTION</code></h2>
+  </hgroup>
+  <article data-timings="">
+    
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -430,7 +507,7 @@ get_r2&lt;-function(...){
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Managing Packages'>
+        data-slide=4 title='Finding New Packages'>
          4
       </a>
     </li>
@@ -448,7 +525,7 @@ get_r2&lt;-function(...){
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Finding New Packages'>
+        data-slide=7 title='Managing Packages'>
          7
       </a>
     </li>
@@ -486,6 +563,30 @@ get_r2&lt;-function(...){
       <a href="#" target="_self" rel='tooltip' 
         data-slide=13 title='Live Coding &amp; Excercise - linear model'>
          13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Creating your own packages'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='How do you create your own package?'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Create the Documentation'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Fill out <code>DESCRIPTION</code>'>
+         17
       </a>
     </li>
   </ul>
