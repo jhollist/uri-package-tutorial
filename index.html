@@ -266,7 +266,7 @@ format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pd
 
 <h2>Excercise</h2>
 
-<p>Using one of the provided links, find a package, install it, load it, and get to the help page for that package</p>
+<p>Using one of the provided links above, find a package, install it, load it, and get to the help page for that package</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -277,9 +277,9 @@ format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pd
     <h2>Anatomy of a function</h2>
   </hgroup>
   <article data-timings="">
-    <p>###function_name(param1, param2, param3=NULL)</p>
+    <h3>function_name(param1, param2, param3=NULL)</h3>
 
-<p>###Aside on style (my opinion)</p>
+<h3>Aside on style (my opinion)</h3>
 
 <ul>
 <li>snake_case (good)</li>
@@ -287,10 +287,11 @@ format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pd
 <li>UpperCamelCase (fair)</li>
 <li>alllowercase (good)</li>
 <li>period.separated (poor)</li>
-<li>For more, <a href="http://journal.r-project.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf">R Journal</a></li>
 <li>consistent (best)</li>
 <li>inconsistent (BAD!!!!)</li>
 </ul>
+
+<p>For more, <a href="http://journal.r-project.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf">R Journal</a></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -315,7 +316,16 @@ args(median)
 <pre><code>## [1] 50.5
 </code></pre>
 
-<pre><code class="r">#t.test
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>A few examples</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">#t.test
 args(t.test)
 </code></pre>
 
@@ -330,13 +340,66 @@ args(t.test)
 ##  Welch Two Sample t-test
 ## 
 ## data:  rnorm(100) and rnorm(100, 10, 1)
-## t = -69.6, df = 198, p-value &lt; 2.2e-16
+## t = -69.68, df = 196.8, p-value &lt; 2.2e-16
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -10.47  -9.89
+##  -10.481  -9.904
 ## sample estimates:
 ## mean of x mean of y 
-##  -0.04242  10.13559
+##   -0.1874   10.0051
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Writing your own functions</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The <code>function()</code> function...</p>
+
+<pre><code class="r">#Create it
+my_function&lt;-function(txt_to_print){
+  print(txt_to_print)
+}
+#Now Use It
+my_function(&quot;Hello World!!&quot;)
+</code></pre>
+
+<pre><code>## [1] &quot;Hello World!!&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Live Coding &amp; Excercise - linear model</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Create some data</li>
+<li>Look at help for <code>lm()</code></li>
+<li>run model</li>
+<li>Try <code>summary()</code> to get more info out of your <code>lm()</code></li>
+</ol>
+
+<h2>Excercise</h2>
+
+<p>Write a function that has two vectors of the same length as input, and returns 
+the R<sup>2</sup> of the linear regression between the two.  Use the code below as a starting
+place</p>
+
+<pre><code class="r">#Replace ... with your code.  Does not imply that all ... code is the same!
+get_r2&lt;-function(...){
+  xlm&lt;-lm(...)
+  xlm_summary&lt;-summary(...)
+  # hint str(xlm_summary) will give you lots of useful info
+  return(...)
+}
 </code></pre>
 
   </article>
@@ -405,6 +468,24 @@ args(t.test)
       <a href="#" target="_self" rel='tooltip' 
         data-slide=10 title='A few examples'>
          10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='A few examples'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Writing your own functions'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Live Coding &amp; Excercise - linear model'>
+         13
       </a>
     </li>
   </ul>

@@ -110,23 +110,24 @@ format.[1](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
 4. Explore
 
 ## Excercise
-Using one of the provided links, find a package, install it, load it, and get to the help page for that package
+Using one of the provided links above, find a package, install it, load it, and get to the help page for that package
 
 ---
 
 ## Anatomy of a function
 
-###function_name(param1, param2, param3=NULL)
+<h3>function_name(param1, param2, param3=NULL)</h3>
 
-###Aside on style (my opinion)
+<h3>Aside on style (my opinion)</h3>
 - snake_case (good)
 - camelCase (fair)
 - UpperCamelCase (fair)
 - alllowercase (good)
 - period.separated (poor)
-- For more, [R Journal](http://journal.r-project.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf)
 - consistent (best)
 - inconsistent (BAD!!!!)
+
+For more, [R Journal](http://journal.r-project.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf)
 
 --- 
 
@@ -152,6 +153,10 @@ median(1:100)
 ## [1] 50.5
 ```
 
+--- 
+
+## A few examples
+
 ```r
 #t.test
 args(t.test)
@@ -171,12 +176,57 @@ t.test(rnorm(100),rnorm(100,10,1),mu=0)
 ## 	Welch Two Sample t-test
 ## 
 ## data:  rnorm(100) and rnorm(100, 10, 1)
-## t = -69.6, df = 198, p-value < 2.2e-16
+## t = -69.68, df = 196.8, p-value < 2.2e-16
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -10.47  -9.89
+##  -10.481  -9.904
 ## sample estimates:
 ## mean of x mean of y 
-##  -0.04242  10.13559
+##   -0.1874   10.0051
 ```
+
+---
+
+## Writing your own functions
+
+The `function()` function...
+
+
+```r
+#Create it
+my_function<-function(txt_to_print){
+  print(txt_to_print)
+}
+#Now Use It
+my_function("Hello World!!")
+```
+
+```
+## [1] "Hello World!!"
+```
+
+---
+## Live Coding & Excercise - linear model
+
+1. Create some data
+2. Look at help for `lm()`
+3. run model
+4. Try `summary()` to get more info out of your `lm()`
+
+## Excercise
+Write a function that has two vectors of the same length as input, and returns 
+the R^2 of the linear regression between the two.  Use the code below as a starting
+place
+
+
+```r
+#Replace ... with your code.  Does not imply that all ... code is the same!
+get_r2<-function(...){
+  xlm<-lm(...)
+  xlm_summary<-summary(...)
+  # hint str(xlm_summary) will give you lots of useful info
+  return(...)
+}
+```
+
 
