@@ -20,7 +20,7 @@ mode        : selfcontained # {standalone, draft}
 4. Know how to work with and build your own functions
 5. Know how to manage multiple funcitons and build your own packages
 
---- &twocol w1:20% w2:80%
+--- &twocol w1:40% w2:60%
 
 ## Packages
 
@@ -41,7 +41,7 @@ format.[1](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
 
 ***=right
 
-```{r echo=FALSE}
+```{r echo=FALSE,results='asis'}
 library(knitr)
 ipack<-data.frame(installed.packages())
 kable(ipack[!is.na(ipack$Priority),][,c(2,4)])

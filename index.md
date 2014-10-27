@@ -20,7 +20,7 @@ mode        : selfcontained # {standalone, draft}
 4. Know how to work with and build your own functions
 5. Know how to manage multiple funcitons and build your own packages
 
---- &twocol w1:20% w2:80%
+--- &twocol w1:40% w2:60%
 
 ## Packages
 
@@ -42,41 +42,37 @@ format.[1](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
 ***=right
 
 
-```
-## 
-## 
-## |           |LibPath                            |Priority    |
-## |:----------|:----------------------------------|:-----------|
-## |base       |C:/Program Files/R/R-3.1.1/library |base        |
-## |boot       |C:/Program Files/R/R-3.1.1/library |recommended |
-## |class      |C:/Program Files/R/R-3.1.1/library |recommended |
-## |cluster    |C:/Program Files/R/R-3.1.1/library |recommended |
-## |codetools  |C:/Program Files/R/R-3.1.1/library |recommended |
-## |compiler   |C:/Program Files/R/R-3.1.1/library |base        |
-## |datasets   |C:/Program Files/R/R-3.1.1/library |base        |
-## |foreign    |C:/Program Files/R/R-3.1.1/library |recommended |
-## |graphics   |C:/Program Files/R/R-3.1.1/library |base        |
-## |grDevices  |C:/Program Files/R/R-3.1.1/library |base        |
-## |grid       |C:/Program Files/R/R-3.1.1/library |base        |
-## |KernSmooth |C:/Program Files/R/R-3.1.1/library |recommended |
-## |lattice    |C:/Program Files/R/R-3.1.1/library |recommended |
-## |MASS       |C:/Program Files/R/R-3.1.1/library |recommended |
-## |Matrix     |C:/Program Files/R/R-3.1.1/library |recommended |
-## |methods    |C:/Program Files/R/R-3.1.1/library |base        |
-## |mgcv       |C:/Program Files/R/R-3.1.1/library |recommended |
-## |nlme       |C:/Program Files/R/R-3.1.1/library |recommended |
-## |nnet       |C:/Program Files/R/R-3.1.1/library |recommended |
-## |parallel   |C:/Program Files/R/R-3.1.1/library |base        |
-## |rpart      |C:/Program Files/R/R-3.1.1/library |recommended |
-## |spatial    |C:/Program Files/R/R-3.1.1/library |recommended |
-## |splines    |C:/Program Files/R/R-3.1.1/library |base        |
-## |stats      |C:/Program Files/R/R-3.1.1/library |base        |
-## |stats4     |C:/Program Files/R/R-3.1.1/library |base        |
-## |survival   |C:/Program Files/R/R-3.1.1/library |recommended |
-## |tcltk      |C:/Program Files/R/R-3.1.1/library |base        |
-## |tools      |C:/Program Files/R/R-3.1.1/library |base        |
-## |utils      |C:/Program Files/R/R-3.1.1/library |base        |
-```
+|           |LibPath                            |Priority    |
+|:----------|:----------------------------------|:-----------|
+|base       |C:/Program Files/R/R-3.1.1/library |base        |
+|boot       |C:/Program Files/R/R-3.1.1/library |recommended |
+|class      |C:/Program Files/R/R-3.1.1/library |recommended |
+|cluster    |C:/Program Files/R/R-3.1.1/library |recommended |
+|codetools  |C:/Program Files/R/R-3.1.1/library |recommended |
+|compiler   |C:/Program Files/R/R-3.1.1/library |base        |
+|datasets   |C:/Program Files/R/R-3.1.1/library |base        |
+|foreign    |C:/Program Files/R/R-3.1.1/library |recommended |
+|graphics   |C:/Program Files/R/R-3.1.1/library |base        |
+|grDevices  |C:/Program Files/R/R-3.1.1/library |base        |
+|grid       |C:/Program Files/R/R-3.1.1/library |base        |
+|KernSmooth |C:/Program Files/R/R-3.1.1/library |recommended |
+|lattice    |C:/Program Files/R/R-3.1.1/library |recommended |
+|MASS       |C:/Program Files/R/R-3.1.1/library |recommended |
+|Matrix     |C:/Program Files/R/R-3.1.1/library |recommended |
+|methods    |C:/Program Files/R/R-3.1.1/library |base        |
+|mgcv       |C:/Program Files/R/R-3.1.1/library |recommended |
+|nlme       |C:/Program Files/R/R-3.1.1/library |recommended |
+|nnet       |C:/Program Files/R/R-3.1.1/library |recommended |
+|parallel   |C:/Program Files/R/R-3.1.1/library |base        |
+|rpart      |C:/Program Files/R/R-3.1.1/library |recommended |
+|spatial    |C:/Program Files/R/R-3.1.1/library |recommended |
+|splines    |C:/Program Files/R/R-3.1.1/library |base        |
+|stats      |C:/Program Files/R/R-3.1.1/library |base        |
+|stats4     |C:/Program Files/R/R-3.1.1/library |base        |
+|survival   |C:/Program Files/R/R-3.1.1/library |recommended |
+|tcltk      |C:/Program Files/R/R-3.1.1/library |base        |
+|tools      |C:/Program Files/R/R-3.1.1/library |base        |
+|utils      |C:/Program Files/R/R-3.1.1/library |base        |
 
 
 ## Header Across The Full Width of Both of the Columns

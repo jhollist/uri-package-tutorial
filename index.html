@@ -76,13 +76,13 @@
   </hgroup>
   <article>
       
-    <div class='left' style='float:left;width:20%'>
+    <div class='left' style='float:left;width:40%'>
       <ul>
 <li>what is a package?</li>
 </ul>
 
     </div>    
-    <div class='right' style='float:right;width:80%'>
+    <div class='right' style='float:right;width:60%'>
       <blockquote>
 <p>An extension of the R base system with code, data and documentation in standardized
 format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf">1</a></p>
@@ -107,40 +107,159 @@ format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pd
 
     </div>    
     <div class='right' style='float:right;width:80%'>
-      <pre><code>## 
-## 
-## |           |LibPath                            |Priority    |
-## |:----------|:----------------------------------|:-----------|
-## |base       |C:/Program Files/R/R-3.1.1/library |base        |
-## |boot       |C:/Program Files/R/R-3.1.1/library |recommended |
-## |class      |C:/Program Files/R/R-3.1.1/library |recommended |
-## |cluster    |C:/Program Files/R/R-3.1.1/library |recommended |
-## |codetools  |C:/Program Files/R/R-3.1.1/library |recommended |
-## |compiler   |C:/Program Files/R/R-3.1.1/library |base        |
-## |datasets   |C:/Program Files/R/R-3.1.1/library |base        |
-## |foreign    |C:/Program Files/R/R-3.1.1/library |recommended |
-## |graphics   |C:/Program Files/R/R-3.1.1/library |base        |
-## |grDevices  |C:/Program Files/R/R-3.1.1/library |base        |
-## |grid       |C:/Program Files/R/R-3.1.1/library |base        |
-## |KernSmooth |C:/Program Files/R/R-3.1.1/library |recommended |
-## |lattice    |C:/Program Files/R/R-3.1.1/library |recommended |
-## |MASS       |C:/Program Files/R/R-3.1.1/library |recommended |
-## |Matrix     |C:/Program Files/R/R-3.1.1/library |recommended |
-## |methods    |C:/Program Files/R/R-3.1.1/library |base        |
-## |mgcv       |C:/Program Files/R/R-3.1.1/library |recommended |
-## |nlme       |C:/Program Files/R/R-3.1.1/library |recommended |
-## |nnet       |C:/Program Files/R/R-3.1.1/library |recommended |
-## |parallel   |C:/Program Files/R/R-3.1.1/library |base        |
-## |rpart      |C:/Program Files/R/R-3.1.1/library |recommended |
-## |spatial    |C:/Program Files/R/R-3.1.1/library |recommended |
-## |splines    |C:/Program Files/R/R-3.1.1/library |base        |
-## |stats      |C:/Program Files/R/R-3.1.1/library |base        |
-## |stats4     |C:/Program Files/R/R-3.1.1/library |base        |
-## |survival   |C:/Program Files/R/R-3.1.1/library |recommended |
-## |tcltk      |C:/Program Files/R/R-3.1.1/library |base        |
-## |tools      |C:/Program Files/R/R-3.1.1/library |base        |
-## |utils      |C:/Program Files/R/R-3.1.1/library |base        |
-</code></pre>
+      <table><thead>
+<tr>
+<th align="left"></th>
+<th align="left">LibPath</th>
+<th align="left">Priority</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">base</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">base</td>
+</tr>
+<tr>
+<td align="left">boot</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">recommended</td>
+</tr>
+<tr>
+<td align="left">class</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">recommended</td>
+</tr>
+<tr>
+<td align="left">cluster</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">recommended</td>
+</tr>
+<tr>
+<td align="left">codetools</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">recommended</td>
+</tr>
+<tr>
+<td align="left">compiler</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">base</td>
+</tr>
+<tr>
+<td align="left">datasets</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">base</td>
+</tr>
+<tr>
+<td align="left">foreign</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">recommended</td>
+</tr>
+<tr>
+<td align="left">graphics</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">base</td>
+</tr>
+<tr>
+<td align="left">grDevices</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">base</td>
+</tr>
+<tr>
+<td align="left">grid</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">base</td>
+</tr>
+<tr>
+<td align="left">KernSmooth</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">recommended</td>
+</tr>
+<tr>
+<td align="left">lattice</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">recommended</td>
+</tr>
+<tr>
+<td align="left">MASS</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">recommended</td>
+</tr>
+<tr>
+<td align="left">Matrix</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">recommended</td>
+</tr>
+<tr>
+<td align="left">methods</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">base</td>
+</tr>
+<tr>
+<td align="left">mgcv</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">recommended</td>
+</tr>
+<tr>
+<td align="left">nlme</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">recommended</td>
+</tr>
+<tr>
+<td align="left">nnet</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">recommended</td>
+</tr>
+<tr>
+<td align="left">parallel</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">base</td>
+</tr>
+<tr>
+<td align="left">rpart</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">recommended</td>
+</tr>
+<tr>
+<td align="left">spatial</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">recommended</td>
+</tr>
+<tr>
+<td align="left">splines</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">base</td>
+</tr>
+<tr>
+<td align="left">stats</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">base</td>
+</tr>
+<tr>
+<td align="left">stats4</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">base</td>
+</tr>
+<tr>
+<td align="left">survival</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">recommended</td>
+</tr>
+<tr>
+<td align="left">tcltk</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">base</td>
+</tr>
+<tr>
+<td align="left">tools</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">base</td>
+</tr>
+<tr>
+<td align="left">utils</td>
+<td align="left">C:/Program Files/R/R-3.1.1/library</td>
+<td align="left">base</td>
+</tr>
+</tbody></table>
 
 <h2>Header Across The Full Width of Both of the Columns</h2>
 
