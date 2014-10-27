@@ -23,7 +23,7 @@ mode        : selfcontained # {standalone, draft}
 --- &twocol w1:40% w2:60%
 
 ## What are Packages
-<img src="http://imgs.xkcd.com/comics/packages.png" style="position: absolute; width:500px;")
+<img src="http://imgs.xkcd.com/comics/packages.png" style="position: absolute; width:500px;"/>
 
 > An extension of the R base system with code, data and documentation in standardized
 format.[1](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
