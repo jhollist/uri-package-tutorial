@@ -44,7 +44,7 @@
   </aside>
   <hgroup class="auto-fadein">
     <h1>Packages and functions in R</h1>
-    <h2></h2>
+    <h2>10/26/2014</h2>
     <p>Jeff Hollister<br/></p>
   </hgroup>
   <article></article>  
@@ -94,19 +94,20 @@ format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pd
 
 <slide class="" id="">
   <hgroup>
-    <h2>Packages</h2>
+    <h2>Base and Recommended</h2>
     <br/>
   </hgroup>
   <article>
-      
-    <div class='left' style='float:left;width:20%'>
+    <p><img src="http://imgs.xkcd.com/comics/packages.png" alt="XKCD Packages"></p>
+  
+    <div class='left' style='float:left;width:40%'>
       <ul>
-<li>base </li>
-<li>recommended</li>
+<li>base (14 Packages)</li>
+<li>recommended (15 Packages)</li>
 </ul>
 
     </div>    
-    <div class='right' style='float:right;width:80%'>
+    <div class='right' style='float:right;width:60%'>
       <table><thead>
 <tr>
 <th align="left"></th>
@@ -174,117 +175,131 @@ format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pd
 <td align="left">C:/Program Files/R/R-3.1.1/library</td>
 <td align="left">recommended</td>
 </tr>
-<tr>
-<td align="left">lattice</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">recommended</td>
-</tr>
-<tr>
-<td align="left">MASS</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">recommended</td>
-</tr>
-<tr>
-<td align="left">Matrix</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">recommended</td>
-</tr>
-<tr>
-<td align="left">methods</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">base</td>
-</tr>
-<tr>
-<td align="left">mgcv</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">recommended</td>
-</tr>
-<tr>
-<td align="left">nlme</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">recommended</td>
-</tr>
-<tr>
-<td align="left">nnet</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">recommended</td>
-</tr>
-<tr>
-<td align="left">parallel</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">base</td>
-</tr>
-<tr>
-<td align="left">rpart</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">recommended</td>
-</tr>
-<tr>
-<td align="left">spatial</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">recommended</td>
-</tr>
-<tr>
-<td align="left">splines</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">base</td>
-</tr>
-<tr>
-<td align="left">stats</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">base</td>
-</tr>
-<tr>
-<td align="left">stats4</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">base</td>
-</tr>
-<tr>
-<td align="left">survival</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">recommended</td>
-</tr>
-<tr>
-<td align="left">tcltk</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">base</td>
-</tr>
-<tr>
-<td align="left">tools</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">base</td>
-</tr>
-<tr>
-<td align="left">utils</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">base</td>
-</tr>
 </tbody></table>
-
-<h2>Header Across The Full Width of Both of the Columns</h2>
 
     </div>
   </article>
 </slide>
 
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Managing Packages</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>listing: <code>installed.packages()</code></li>
+<li>available from current repository: <code>available.packages()</code></li>
+<li>install: <code>install.packages()</code></li>
+<li>remove: <code>remove.packages()</code></li>
+<li>update: <code>update.packages()</code></li>
+<li>loading: <code>library()</code> 
+
+<ul>
+<li>note: see <a href="http://yihui.name/en/2014/07/library-vs-require/">Yihui Xie&#39;s post</a> on <code>library</code> not <code>require</code></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Finding New Packages</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>My own rule of thumb:  If you can think it, you can do it R</li>
+<li>Chances are, someone else has done so already</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Finding New Packages</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Anatomy of a function</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>###function_name(param1, param2, param3=NULL)</p>
+
+<p>###Aside on style (my opinion)</p>
+
+<ul>
+<li>snake_case (good)</li>
+<li>camelCase (fair)</li>
+<li>UpperCamelCase (fair)</li>
+<li>alllowercase (good)</li>
+<li>period.separated (poor)</li>
+<li>For more, <a href="http://journal.r-project.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf">R Journal</a></li>
+<li>consistent (best)</li>
+<li>inconsistent (BAD!!!!)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
 <slide class="" id="">
   <hgroup>
-    <h2>R Code Chunk Example</h2>
+    <h2>A few examples</h2>
     <br/>
   </hgroup>
   <article>
-      
-    <div class='left' style='float:left;width:50%'>
-      <p>Some data and a plot:</p>
-
-<pre><code class="r">data(mtcars)
-with(mtcars,boxplot(mpg~factor(cyl)))
+    <pre><code class="r">#Median
+args(median)
 </code></pre>
 
-    </div>    
-    <div class='right' style='float:right;width:50%'>
-      <p><img src="assets/fig/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3"> </p>
+<pre><code>## function (x, na.rm = FALSE) 
+## NULL
+</code></pre>
 
+<pre><code class="r">median(1:100)
+</code></pre>
+
+<pre><code>## [1] 50.5
+</code></pre>
+
+<pre><code class="r">#t.test
+args(t.test)
+</code></pre>
+
+<pre><code>## function (x, ...) 
+## NULL
+</code></pre>
+
+<pre><code class="r">t.test(rnorm(100),rnorm(100,10,1),mu=0)
+</code></pre>
+
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  rnorm(100) and rnorm(100, 10, 1)
+## t = -69.6, df = 198, p-value &lt; 2.2e-16
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -10.47  -9.89
+## sample estimates:
+## mean of x mean of y 
+##  -0.04242  10.13559
+</code></pre>
+  
+    <div class='left' style='float:left;width:40%'>
+      
+    </div>    
+    <div class='right' style='float:right;width:60%'>
+      
     </div>
   </article>
 </slide>
@@ -307,14 +322,38 @@ with(mtcars,boxplot(mpg~factor(cyl)))
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Packages'>
+        data-slide=3 title='Base and Recommended'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='R Code Chunk Example'>
+        data-slide=4 title='Managing Packages'>
          4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Finding New Packages'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Finding New Packages'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Anatomy of a function'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='A few examples'>
+         8
       </a>
     </li>
   </ul>

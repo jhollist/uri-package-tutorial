@@ -1,6 +1,6 @@
 ---
 title       : Packages and functions in R
-subtitle    : 
+subtitle    : 10/26/2014
 author      : Jeff Hollister
 logo        : epa-seal.png
 biglogo     : epa-seal.png
@@ -31,13 +31,16 @@ mode        : selfcontained # {standalone, draft}
 > An extension of the R base system with code, data and documentation in standardized
 format.[1](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
 
---- &twocol w1:20% w2:80%
 
-## Packages
+--- &twocol w1:40% w2:60%
+
+## Base and Recommended
+
+![XKCD Packages](http://imgs.xkcd.com/comics/packages.png)
 
 ***=left
-- base 
-- recommended
+- base (14 Packages)
+- recommended (15 Packages)
 
 ***=right
 
@@ -56,53 +59,117 @@ format.[1](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
 |grDevices  |C:/Program Files/R/R-3.1.1/library |base        |
 |grid       |C:/Program Files/R/R-3.1.1/library |base        |
 |KernSmooth |C:/Program Files/R/R-3.1.1/library |recommended |
-|lattice    |C:/Program Files/R/R-3.1.1/library |recommended |
-|MASS       |C:/Program Files/R/R-3.1.1/library |recommended |
-|Matrix     |C:/Program Files/R/R-3.1.1/library |recommended |
-|methods    |C:/Program Files/R/R-3.1.1/library |base        |
-|mgcv       |C:/Program Files/R/R-3.1.1/library |recommended |
-|nlme       |C:/Program Files/R/R-3.1.1/library |recommended |
-|nnet       |C:/Program Files/R/R-3.1.1/library |recommended |
-|parallel   |C:/Program Files/R/R-3.1.1/library |base        |
-|rpart      |C:/Program Files/R/R-3.1.1/library |recommended |
-|spatial    |C:/Program Files/R/R-3.1.1/library |recommended |
-|splines    |C:/Program Files/R/R-3.1.1/library |base        |
-|stats      |C:/Program Files/R/R-3.1.1/library |base        |
-|stats4     |C:/Program Files/R/R-3.1.1/library |base        |
-|survival   |C:/Program Files/R/R-3.1.1/library |recommended |
-|tcltk      |C:/Program Files/R/R-3.1.1/library |base        |
-|tools      |C:/Program Files/R/R-3.1.1/library |base        |
-|utils      |C:/Program Files/R/R-3.1.1/library |base        |
+
+--- 
+
+## Managing Packages
 
 
-## Header Across The Full Width of Both of the Columns
+- listing: `installed.packages()`
+- available from current repository: `available.packages()`
+- install: `install.packages()`
+- remove: `remove.packages()`
+- update: `update.packages()`
+- loading: `library()` 
+ - note: see [Yihui Xie's post](http://yihui.name/en/2014/07/library-vs-require/) on `library` not `require`
+
+---
+
+## Finding New Packages
+
+- My own rule of thumb:  If you can think it, you can do it R
+- Chances are, someone else has done so already
+
+
+
+---
+
+## Finding New Packages
 
 ***=left
-
-- list
-- on the left 
-- side
-
+- Source Repositories
+ - CRAN
+ - RForge
+ - BioConductor
+ - GitHub
+ 
 ***=right
+- Getting Help
+ - CRAN Task Views
+ - SourceForge
+ - Journal of Statistical Software
+ - R Journal
+ - Twitter (#rstats, @RLangTip)
+ - R Bloggers
+ 
+---
 
-Table       |Table        |Table      |Table           |
-------------|-------------|-----------|----------------|
-First Row   | 1234567     |0.82       |5.95            |
-Second Row  | 89          |0.69       |5.02            |
-Third Row   | 100         |0.72       |7.0             |
+## Live Coding: Typical workflow
 
---- &twocol w1:50% w2:50%
+---
 
-## R Code Chunk Example
+## Anatomy of a function
 
-***=left
-Some data and a plot:
+###function_name(param1, param2, param3=NULL)
+
+###Aside on style (my opinion)
+- snake_case (good)
+- camelCase (fair)
+- UpperCamelCase (fair)
+- alllowercase (good)
+- period.separated (poor)
+- For more, [R Journal](http://journal.r-project.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf)
+- consistent (best)
+- inconsistent (BAD!!!!)
+
+--- &twocol w1:40% w2:60%
+
+## A few examples
 
 
 ```r
-data(mtcars)
-with(mtcars,boxplot(mpg~factor(cyl)))
+#Median
+args(median)
 ```
 
-***=right
-![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3.png) 
+```
+## function (x, na.rm = FALSE) 
+## NULL
+```
+
+```r
+median(1:100)
+```
+
+```
+## [1] 50.5
+```
+
+```r
+#t.test
+args(t.test)
+```
+
+```
+## function (x, ...) 
+## NULL
+```
+
+```r
+t.test(rnorm(100),rnorm(100,10,1),mu=0)
+```
+
+```
+## 
+## 	Welch Two Sample t-test
+## 
+## data:  rnorm(100) and rnorm(100, 10, 1)
+## t = -69.6, df = 198, p-value < 2.2e-16
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -10.47  -9.89
+## sample estimates:
+## mean of x mean of y 
+##  -0.04242  10.13559
+```
+

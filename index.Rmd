@@ -1,6 +1,6 @@
 ---
 title       : Packages and functions in R
-subtitle    : 
+subtitle    : 10/26/2014
 author      : Jeff Hollister
 logo        : epa-seal.png
 biglogo     : epa-seal.png
@@ -31,52 +31,97 @@ mode        : selfcontained # {standalone, draft}
 > An extension of the R base system with code, data and documentation in standardized
 format.[1](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
 
---- &twocol w1:20% w2:80%
 
-## Packages
+--- &twocol w1:40% w2:60%
+
+## Base and Recommended
+
+![XKCD Packages](http://imgs.xkcd.com/comics/packages.png)
 
 ***=left
-- base 
-- recommended
+- base (14 Packages)
+- recommended (15 Packages)
 
 ***=right
 
 ```{r echo=FALSE,results='asis'}
 library(knitr)
 ipack<-data.frame(installed.packages())
-kable(ipack[!is.na(ipack$Priority),][,c(2,4)])
+kable(ipack[!is.na(ipack$Priority),][,c(2,4)][1:12,])
 ```
 
+--- 
 
-## Header Across The Full Width of Both of the Columns
+## Managing Packages
+
+
+- listing: `installed.packages()`
+- available from current repository: `available.packages()`
+- install: `install.packages()`
+- remove: `remove.packages()`
+- update: `update.packages()`
+- loading: `library()` 
+ - note: see [Yihui Xie's post](http://yihui.name/en/2014/07/library-vs-require/) on `library` not `require`
+
+---
+
+## Finding New Packages
+
+- My own rule of thumb:  If you can think it, you can do it R
+- Chances are, someone else has done so already
+
+
+
+---
+
+## Finding New Packages
 
 ***=left
-
-- list
-- on the left 
-- side
-
+- Source Repositories
+ - CRAN
+ - RForge
+ - BioConductor
+ - GitHub
+ 
 ***=right
+- Getting Help
+ - CRAN Task Views
+ - SourceForge
+ - Journal of Statistical Software
+ - R Journal
+ - Twitter (#rstats, @RLangTip)
+ - R Bloggers
+ 
+---
 
-Table       |Table        |Table      |Table           |
-------------|-------------|-----------|----------------|
-First Row   | 1234567     |0.82       |5.95            |
-Second Row  | 89          |0.69       |5.02            |
-Third Row   | 100         |0.72       |7.0             |
+## Live Coding: Typical workflow
 
---- &twocol w1:50% w2:50%
+---
 
-## R Code Chunk Example
+## Anatomy of a function
 
-***=left
-Some data and a plot:
+###function_name(param1, param2, param3=NULL)
 
-```{r eval=FALSE}
-data(mtcars)
-with(mtcars,boxplot(mpg~factor(cyl)))
+###Aside on style (my opinion)
+- snake_case (good)
+- camelCase (fair)
+- UpperCamelCase (fair)
+- alllowercase (good)
+- period.separated (poor)
+- For more, [R Journal](http://journal.r-project.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf)
+- consistent (best)
+- inconsistent (BAD!!!!)
+
+--- &twocol w1:40% w2:60%
+
+## A few examples
+
+```{r}
+#Median
+args(median)
+median(1:100)
+#t.test
+args(t.test)
+t.test(rnorm(100),rnorm(100,10,1),mu=0)
 ```
 
-***=right
-```{r echo=FALSE, fig.width=7}
-with(mtcars,boxplot(mpg~factor(cyl)))
-```
