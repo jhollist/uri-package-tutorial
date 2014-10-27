@@ -28,7 +28,7 @@ mode        : selfcontained # {standalone, draft}
 > An extension of the R base system with code, data and documentation in standardized
 format.[1](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
 
-<img src="http://imgs.xkcd.com/comics/packages.png" style="position: absolute; width:500px; bottom: 50px;left:300px; right:300px;"/>
+<img src="http://imgs.xkcd.com/comics/packages.png" style="position: absolute; width:600px; bottom: 50px;left:300px; right:300px;"/>
 
 --- &twocol w1:40% w2:60%
 
@@ -37,30 +37,25 @@ format.[1](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
 ***=left
 - base (14 Packages)
 - recommended (15 Packages)
+- First few
 
 ***=right
 
 
-|           |LibPath                            |Priority    |
-|:----------|:----------------------------------|:-----------|
-|base       |C:/Program Files/R/R-3.1.1/library |base        |
-|boot       |C:/Program Files/R/R-3.1.1/library |recommended |
-|class      |C:/Program Files/R/R-3.1.1/library |recommended |
-|cluster    |C:/Program Files/R/R-3.1.1/library |recommended |
-|codetools  |C:/Program Files/R/R-3.1.1/library |recommended |
-|compiler   |C:/Program Files/R/R-3.1.1/library |base        |
-|datasets   |C:/Program Files/R/R-3.1.1/library |base        |
-|foreign    |C:/Program Files/R/R-3.1.1/library |recommended |
-|graphics   |C:/Program Files/R/R-3.1.1/library |base        |
-|grDevices  |C:/Program Files/R/R-3.1.1/library |base        |
-|grid       |C:/Program Files/R/R-3.1.1/library |base        |
-|KernSmooth |C:/Program Files/R/R-3.1.1/library |recommended |
+|          |LibPath                            |Priority    |
+|:---------|:----------------------------------|:-----------|
+|base      |C:/Program Files/R/R-3.1.1/library |base        |
+|boot      |C:/Program Files/R/R-3.1.1/library |recommended |
+|class     |C:/Program Files/R/R-3.1.1/library |recommended |
+|cluster   |C:/Program Files/R/R-3.1.1/library |recommended |
+|codetools |C:/Program Files/R/R-3.1.1/library |recommended |
+|compiler  |C:/Program Files/R/R-3.1.1/library |base        |
+|datasets  |C:/Program Files/R/R-3.1.1/library |base        |
+|foreign   |C:/Program Files/R/R-3.1.1/library |recommended |
 
 --- 
 
 ## Managing Packages
-
-
 - listing: `installed.packages()`
 - available from current repository: `available.packages()`
 - install: `install.packages()`
@@ -68,39 +63,54 @@ format.[1](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
 - update: `update.packages()`
 - loading: `library()` 
  - note: see [Yihui Xie's post](http://yihui.name/en/2014/07/library-vs-require/) on `library` not `require`
+- help: `help(package="package_name")`
 
----
-
-## Finding New Packages
-
-- My own rule of thumb:  If you can think it, you can do it R
-- Chances are, someone else has done so already
-
-
-
----
+--- &twocol w1:40% w2:60%
 
 ## Finding New Packages
 
 ***=left
-- Source Repositories
- - CRAN
- - RForge
- - BioConductor
- - GitHub
+- My own rule of thumb:  If you can think it, you can do it R
+- Chances are, someone else has done so already
+- For comparison
+ - SAS ~1200 proc's
+ - R ~153,696 functions
  
 ***=right
-- Getting Help
- - CRAN Task Views
- - SourceForge
- - Journal of Statistical Software
- - R Journal
- - Twitter (#rstats, @RLangTip)
- - R Bloggers
- 
+<img src="http://r4stats.files.wordpress.com/2012/04/fig_8_cran.png" style="width: 550px; bottom: 50px; left: 10px;"/>
+
+--- 
+
+## Finding New Packages
+
+- Source Repositories
+ - CRAN ([http://cran.r-project.org/](http://cran.r-project.org/))
+ - RForge ([https://r-forge.r-project.org/](https://r-forge.r-project.org/))
+ - BioConductor ([http://www.bioconductor.org/](http://www.bioconductor.org/))
+ - GitHub ([https://github.com/](https://github.com/search?l=R&q=R&type=Repositories&utf8=%E2%9C%93))
+
+--- 
+## Finding New Packages
+
+- Finding Packages and Getting Help
+ - CRAN Task Views ([http://cran.r-project.org/web/views/](http://cran.r-project.org/web/views/))
+ - StackOverflow ([http://stackoverflow.com/questions/tagged/r](http://stackoverflow.com/questions/tagged/r))
+ - Journal of Statistical Software ([http://www.jstatsoft.org/](http://www.jstatsoft.org/))
+ - R Journal ([http://journal.r-project.org/](http://journal.r-project.org/))
+ - Twitter, #rstats ([https://twitter.com/](https://twitter.com/search?q=%23rstats))
+ - R Bloggers ([http://www.r-bloggers.com/](http://www.r-bloggers.com/))
+
 ---
 
-## Live Coding: Typical workflow
+## Live Coding - Typical workflow
+
+1. Find
+2. Install
+3. Load
+4. Explore
+
+## Excercise
+Using one of the provided links, find a package, install it, load it, and get to the help page for that package
 
 ---
 
@@ -118,9 +128,10 @@ format.[1](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
 - consistent (best)
 - inconsistent (BAD!!!!)
 
---- &twocol w1:40% w2:60%
+--- 
 
 ## A few examples
+
 
 
 ```r

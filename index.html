@@ -80,7 +80,7 @@
 format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf">1</a></p>
 </blockquote>
 
-<p><img src="http://imgs.xkcd.com/comics/packages.png" style="position: absolute; width:500px; bottom: 50px;left:300px; right:300px;"/></p>
+<p><img src="http://imgs.xkcd.com/comics/packages.png" style="position: absolute; width:600px; bottom: 50px;left:300px; right:300px;"/></p>
   
     <div class='left' style='float:left;width:40%'>
       
@@ -102,6 +102,7 @@ format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pd
       <ul>
 <li>base (14 Packages)</li>
 <li>recommended (15 Packages)</li>
+<li>First few</li>
 </ul>
 
     </div>    
@@ -153,26 +154,6 @@ format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pd
 <td align="left">C:/Program Files/R/R-3.1.1/library</td>
 <td align="left">recommended</td>
 </tr>
-<tr>
-<td align="left">graphics</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">base</td>
-</tr>
-<tr>
-<td align="left">grDevices</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">base</td>
-</tr>
-<tr>
-<td align="left">grid</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">base</td>
-</tr>
-<tr>
-<td align="left">KernSmooth</td>
-<td align="left">C:/Program Files/R/R-3.1.1/library</td>
-<td align="left">recommended</td>
-</tr>
 </tbody></table>
 
     </div>
@@ -195,24 +176,38 @@ format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pd
 <ul>
 <li>note: see <a href="http://yihui.name/en/2014/07/library-vs-require/">Yihui Xie&#39;s post</a> on <code>library</code> not <code>require</code></li>
 </ul></li>
+<li>help: <code>help(package=&quot;package_name&quot;)</code></li>
 </ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-5" style="background:;">
+<slide class="" id="">
   <hgroup>
     <h2>Finding New Packages</h2>
+    <br/>
   </hgroup>
-  <article data-timings="">
-    <ul>
+  <article>
+      
+    <div class='left' style='float:left;width:40%'>
+      <ul>
 <li>My own rule of thumb:  If you can think it, you can do it R</li>
 <li>Chances are, someone else has done so already</li>
+<li>For comparison
+
+<ul>
+<li>SAS ~1200 proc&#39;s</li>
+<li>R ~153,696 functions</li>
+</ul></li>
 </ul>
 
+    </div>    
+    <div class='right' style='float:right;width:60%'>
+      <p><img src="http://r4stats.files.wordpress.com/2012/04/fig_8_cran.png" style="width: 550px; bottom: 50px; left: 10px;"/></p>
+
+    </div>
   </article>
-  <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-6" style="background:;">
@@ -220,12 +215,64 @@ format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pd
     <h2>Finding New Packages</h2>
   </hgroup>
   <article data-timings="">
-    
+    <ul>
+<li>Source Repositories
+
+<ul>
+<li>CRAN (<a href="http://cran.r-project.org/">http://cran.r-project.org/</a>)</li>
+<li>RForge (<a href="https://r-forge.r-project.org/">https://r-forge.r-project.org/</a>)</li>
+<li>BioConductor (<a href="http://www.bioconductor.org/">http://www.bioconductor.org/</a>)</li>
+<li>GitHub (<a href="https://github.com/search?l=R&amp;q=R&amp;type=Repositories&amp;utf8=%E2%9C%93">https://github.com/</a>)</li>
+</ul></li>
+</ul>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Finding New Packages</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Finding Packages and Getting Help
+
+<ul>
+<li>CRAN Task Views (<a href="http://cran.r-project.org/web/views/">http://cran.r-project.org/web/views/</a>)</li>
+<li>StackOverflow (<a href="http://stackoverflow.com/questions/tagged/r">http://stackoverflow.com/questions/tagged/r</a>)</li>
+<li>Journal of Statistical Software (<a href="http://www.jstatsoft.org/">http://www.jstatsoft.org/</a>)</li>
+<li>R Journal (<a href="http://journal.r-project.org/">http://journal.r-project.org/</a>)</li>
+<li>Twitter, #rstats (<a href="https://twitter.com/search?q=%23rstats">https://twitter.com/</a>)</li>
+<li>R Bloggers (<a href="http://www.r-bloggers.com/">http://www.r-bloggers.com/</a>)</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Live Coding - Typical workflow</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Find</li>
+<li>Install</li>
+<li>Load</li>
+<li>Explore</li>
+</ol>
+
+<h2>Excercise</h2>
+
+<p>Using one of the provided links, find a package, install it, load it, and get to the help page for that package</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
   <hgroup>
     <h2>Anatomy of a function</h2>
   </hgroup>
@@ -249,12 +296,11 @@ format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pd
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="">
+<slide class="" id="slide-10" style="background:;">
   <hgroup>
     <h2>A few examples</h2>
-    <br/>
   </hgroup>
-  <article>
+  <article data-timings="">
     <pre><code class="r">#Median
 args(median)
 </code></pre>
@@ -292,14 +338,9 @@ args(t.test)
 ## mean of x mean of y 
 ##  -0.04242  10.13559
 </code></pre>
-  
-    <div class='left' style='float:left;width:40%'>
-      
-    </div>    
-    <div class='right' style='float:right;width:60%'>
-      
-    </div>
+
   </article>
+  <!-- Presenter Notes -->
 </slide>
 
     <slide class="backdrop"></slide>
@@ -344,14 +385,26 @@ args(t.test)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Anatomy of a function'>
+        data-slide=7 title='Finding New Packages'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='A few examples'>
+        data-slide=8 title='Live Coding - Typical workflow'>
          8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Anatomy of a function'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='A few examples'>
+         10
       </a>
     </li>
   </ul>
