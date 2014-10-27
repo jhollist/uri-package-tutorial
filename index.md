@@ -24,6 +24,8 @@ mode        : selfcontained # {standalone, draft}
 
 ## Packages
 
+![XKCD Packages](http://imgs.xkcd.com/comics/packages.png)
+
 ***=left
 - what is a package?
 
@@ -31,7 +33,7 @@ mode        : selfcontained # {standalone, draft}
 > An extension of the R base system with code, data and documentation in standardized
 format.[1](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
 
-![XKCD Packages](http://imgs.xkcd.com/comics/packages.png)
+
 
 --- &twocol w1:40% w2:60%
 
