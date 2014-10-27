@@ -28,7 +28,7 @@ mode        : selfcontained # {standalone, draft}
 > An extension of the R base system with code, data and documentation in standardized
 format.[1](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
 
-<img src="http://imgs.xkcd.com/comics/packages.png" style="position: absolute; width:800px; bottom: 50px;left:100px; right:100px;"/>
+<img src="http://imgs.xkcd.com/comics/packages.png" style="position: absolute; width:500px; bottom: 50px;left:300px; right:300px;"/>
 
 --- &twocol w1:40% w2:60%
 
