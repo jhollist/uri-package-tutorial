@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>jwhSlidifyStyle</title>
+  <title>Packages and functions in R</title>
   <meta charset="utf-8">
-  <meta name="description" content="jwhSlidifyStyle">
+  <meta name="description" content="Packages and functions in R">
   <meta name="author" content="Jeff Hollister">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -43,9 +43,9 @@
     <img src="assets/img/epa-seal.png">
   </aside>
   <hgroup class="auto-fadein">
-    <h1>jwhSlidifyStyle</h1>
-    <h2>css hack</h2>
-    <p>Jeff Hollister<br/>Research Ecologist</p>
+    <h1>Packages and functions in R</h1>
+    <h2></h2>
+    <p>Jeff Hollister<br/></p>
   </hgroup>
   <article></article>  
 </slide>
@@ -54,72 +54,95 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Read-And-Delete</h2>
+    <h2>Goals</h2>
   </hgroup>
   <article data-timings="">
     <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
+<li>Describe what a package is</li>
+<li>Know where and how to find and install new packages</li>
+<li>Know how to manage your packages</li>
+<li>Know how to work with and build your own functions</li>
+<li>Know how to manage multiple funcitons and build your own packages</li>
 </ol>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="class" id="id" style="background:;">
-  <hgroup>
-    <h2>Slide 2</h2>
-  </hgroup>
-  <article data-timings="">
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
 <slide class="" id="">
   <hgroup>
-    <h2>Header Across The Full Width of Both of the Columns</h2>
+    <h2>Packages</h2>
     <br/>
   </hgroup>
   <article>
       
     <div class='left' style='float:left;width:20%'>
       <ul>
-<li>list</li>
-<li>on the left </li>
-<li>side</li>
+<li>what is a package?</li>
 </ul>
 
     </div>    
     <div class='right' style='float:right;width:80%'>
-      <table><thead>
-<tr>
-<th>Table</th>
-<th>Table</th>
-<th>Table</th>
-<th>Table</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>First Row</td>
-<td>1234567</td>
-<td>0.82</td>
-<td>5.95</td>
-</tr>
-<tr>
-<td>Second Row</td>
-<td>89</td>
-<td>0.69</td>
-<td>5.02</td>
-</tr>
-<tr>
-<td>Third Row</td>
-<td>100</td>
-<td>0.72</td>
-<td>7.0</td>
-</tr>
-</tbody></table>
+      <blockquote>
+<p>An extension of the R base system with code, data and documentation in standardized
+format.<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf">1</a></p>
+</blockquote>
+
+    </div>
+  </article>
+</slide>
+
+<slide class="" id="">
+  <hgroup>
+    <h2>Packages</h2>
+    <br/>
+  </hgroup>
+  <article>
+      
+    <div class='left' style='float:left;width:20%'>
+      <ul>
+<li>base </li>
+<li>recommended</li>
+</ul>
+
+    </div>    
+    <div class='right' style='float:right;width:80%'>
+      <pre><code>## 
+## 
+## |           |LibPath                            |Priority    |
+## |:----------|:----------------------------------|:-----------|
+## |base       |C:/Program Files/R/R-3.1.1/library |base        |
+## |boot       |C:/Program Files/R/R-3.1.1/library |recommended |
+## |class      |C:/Program Files/R/R-3.1.1/library |recommended |
+## |cluster    |C:/Program Files/R/R-3.1.1/library |recommended |
+## |codetools  |C:/Program Files/R/R-3.1.1/library |recommended |
+## |compiler   |C:/Program Files/R/R-3.1.1/library |base        |
+## |datasets   |C:/Program Files/R/R-3.1.1/library |base        |
+## |foreign    |C:/Program Files/R/R-3.1.1/library |recommended |
+## |graphics   |C:/Program Files/R/R-3.1.1/library |base        |
+## |grDevices  |C:/Program Files/R/R-3.1.1/library |base        |
+## |grid       |C:/Program Files/R/R-3.1.1/library |base        |
+## |KernSmooth |C:/Program Files/R/R-3.1.1/library |recommended |
+## |lattice    |C:/Program Files/R/R-3.1.1/library |recommended |
+## |MASS       |C:/Program Files/R/R-3.1.1/library |recommended |
+## |Matrix     |C:/Program Files/R/R-3.1.1/library |recommended |
+## |methods    |C:/Program Files/R/R-3.1.1/library |base        |
+## |mgcv       |C:/Program Files/R/R-3.1.1/library |recommended |
+## |nlme       |C:/Program Files/R/R-3.1.1/library |recommended |
+## |nnet       |C:/Program Files/R/R-3.1.1/library |recommended |
+## |parallel   |C:/Program Files/R/R-3.1.1/library |base        |
+## |rpart      |C:/Program Files/R/R-3.1.1/library |recommended |
+## |spatial    |C:/Program Files/R/R-3.1.1/library |recommended |
+## |splines    |C:/Program Files/R/R-3.1.1/library |base        |
+## |stats      |C:/Program Files/R/R-3.1.1/library |base        |
+## |stats4     |C:/Program Files/R/R-3.1.1/library |base        |
+## |survival   |C:/Program Files/R/R-3.1.1/library |recommended |
+## |tcltk      |C:/Program Files/R/R-3.1.1/library |base        |
+## |tools      |C:/Program Files/R/R-3.1.1/library |base        |
+## |utils      |C:/Program Files/R/R-3.1.1/library |base        |
+</code></pre>
+
+<h2>Header Across The Full Width of Both of the Columns</h2>
 
     </div>
   </article>
@@ -136,12 +159,12 @@
       <p>Some data and a plot:</p>
 
 <pre><code class="r">data(mtcars)
-with(mtcars, boxplot(mpg ~ factor(cyl)))
+with(mtcars,boxplot(mpg~factor(cyl)))
 </code></pre>
 
     </div>    
     <div class='right' style='float:right;width:50%'>
-      <p><img src="assets/fig/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </p>
+      <p><img src="assets/fig/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3"> </p>
 
     </div>
   </article>
@@ -153,19 +176,19 @@ with(mtcars, boxplot(mpg ~ factor(cyl)))
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
+        data-slide=1 title='Goals'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='Packages'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Header Across The Full Width of Both of the Columns'>
+        data-slide=3 title='Packages'>
          3
       </a>
     </li>

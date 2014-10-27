@@ -1,10 +1,10 @@
 ---
-title       : jwhSlidifyStyle
-subtitle    : css hack
+title       : Packages and functions in R
+subtitle    : 
 author      : Jeff Hollister
 logo        : epa-seal.png
 biglogo     : epa-seal.png
-job         : Research Ecologist
+job         : 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
@@ -12,17 +12,41 @@ widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 ---
 
-## Read-And-Delete
+## Goals
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
-
---- .class #id 
-
-## Slide 2
+1. Describe what a package is
+2. Know where and how to find and install new packages
+3. Know how to manage your packages
+4. Know how to work with and build your own functions
+5. Know how to manage multiple funcitons and build your own packages
 
 --- &twocol w1:20% w2:80%
+
+## Packages
+
+***=left
+- what is a package?
+
+***=right
+> An extension of the R base system with code, data and documentation in standardized
+format.[1](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
+
+--- &twocol w1:20% w2:80%
+
+## Packages
+
+***=left
+- base 
+- recommended
+
+***=right
+
+```{r echo=FALSE}
+library(knitr)
+ipack<-data.frame(installed.packages())
+kable(ipack[!is.na(ipack$Priority),][,c(2,4)])
+```
+
 
 ## Header Across The Full Width of Both of the Columns
 
