@@ -193,6 +193,7 @@ get_r2<-function(...){
  - You have developed a new method
  - Share code for a published paper
  - Keep your own code organized
+ 
 > - When?
  - A method is finalized
  - Paper is published
