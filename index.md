@@ -54,7 +54,7 @@ format.[1](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
 |foreign   |C:/Program Files/R/R-3.1.1/library |recommended |
 
 
---- &twocol w1:40% w2:60%
+--- &twocol w1:35% w2:60%
 
 ## Finding New Packages
 
@@ -66,7 +66,7 @@ format.[1](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
  - R ~153,696 functions
  
 ***=right
-<img src="http://r4stats.files.wordpress.com/2012/04/fig_8_cran.png" style="width: 550px; bottom: 50px; left: 10px;"/>
+<img src="http://r4stats.files.wordpress.com/2012/04/fig_8_cran.png" style="width: 500px; bottom: 50px;"/>
 
 --- 
 
@@ -153,7 +153,7 @@ median(1:100)
 ## [1] 50.5
 ```
 
---- &twocol w1:45% w2:45%
+--- &twocol w1:27% w2:73%
 
 ## A few examples
 
@@ -217,7 +217,7 @@ my_function("Hello World!!")
 
 ## Excercise
 Write a function that has two vectors of the same length as input, and returns 
-the R^2 of the linear regression between the two.  Use the code below as a starting
+the R<sup>2</sup> of the linear regression between the two.  Use the code below as a starting
 place
 
 
@@ -261,8 +261,8 @@ get_r2<-function(...){
  - Structure
  - Documentation
  - `DESCRIPTION` File
-  
---- &twocol w1:30% w2:68%
+
+--- &twocol w1:34% w2:66%
 
 ## Create the Structure
 
@@ -279,17 +279,10 @@ devtools::create("test")
 
 ```
 ## Creating package test in .
-## No DESCRIPTION found. Creating with values:
-## 
-## Package: test
-## Title: What the package does (short line)
-## Version: 0.1
-## Authors@R: "First Last <first.last@example.com> [aut, cre]"
-## Description: What the package does (paragraph)
-## Depends: R (>= 3.1.1)
-## License: What license is it under?
-## LazyData: true
-## Adding Rstudio project file to test
+```
+
+```
+## Error: Directory already exists
 ```
 
 ```r
@@ -300,7 +293,7 @@ list.files("test")
 ## [1] "DESCRIPTION" "man"         "R"
 ```
 
---- &twocol w1:30% w2:68%
+--- &twocol w1:40% w2:58%%
 
 ## Create the Documentation
 
@@ -316,8 +309,9 @@ list.files("test")
 ```r
 #' Get r2
 #'
-#' This function takes two input vectors, runs a linear regression and returns
-#' the coeffecient of determination
+#' This function takes two input vectors,
+#' runs a linear regression and returns 
+#' the coeffecient of determination.
 #'
 #' @param x The independent variable
 #' @param y The dependent variable
@@ -329,9 +323,9 @@ get_r2<-function(x,y){
 }
 ```
 
---- &twocol w1:30% w2:68%
+--- &twocol w1:42% w2:55%
  
-## Fill out `DESCRIPTION`
+## Fill out DESCRIPTION
 
 ***=left
 - Edit directly
@@ -342,7 +336,8 @@ get_r2<-function(x,y){
 Package: test
 Title: What the package does (short line)
 Version: 0.1
-Authors@R: "First Last <first.last@example.com> [aut, cre]"
+Authors@R: "First Last <first.last@example.com> 
+            [aut, cre]"
 Description: What the package does (paragraph)
 Depends: R (>= 3.1.1)
 License: What license is it under?
@@ -352,4 +347,16 @@ LazyData: true
 ---
 
 ## Build the package
-  
+
+- Won't work in lab (maybe on mac side)
+- Command line
+ - `R CMD build`
+ - `R CMD check`
+- `devtools::build()
+- RStudio
+- devtools
+
+## Share it with the world
+
+- CRAN ([http://cran.r-project.org/submit.html](http://cran.r-project.org/submit.html))
+- GitHub (i.e. [https://github.com/jhollist](https://github.com/jhollist))
