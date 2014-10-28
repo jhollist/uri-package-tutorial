@@ -353,7 +353,7 @@ LazyData: true
 - Command line
  - `R CMD build`
  - `R CMD check`
-- `devtools::build()
+- `devtools::build()`
 - RStudio
 - devtools
 
