@@ -153,9 +153,11 @@ median(1:100)
 ## [1] 50.5
 ```
 
---- 
+--- &twocol w1:45% w2:45%
 
 ## A few examples
+
+***=left
 
 ```r
 args(t.test)
@@ -165,6 +167,8 @@ args(t.test)
 ## function (x, ...) 
 ## NULL
 ```
+
+***=right
 
 ```r
 t.test(rnorm(100),rnorm(100,10,1),mu=0)
@@ -258,17 +262,94 @@ get_r2<-function(...){
  - Documentation
  - `DESCRIPTION` File
   
----
+--- &twocol w1:30% w2:68%
 
 ## Create the Structure
 
----
+***=left
+- `package.skeleton()`
+- `devtools::create()`
+- RStudio project
+
+***=right
+
+```r
+devtools::create("test")
+```
+
+```
+## Creating package test in .
+## No DESCRIPTION found. Creating with values:
+## 
+## Package: test
+## Title: What the package does (short line)
+## Version: 0.1
+## Authors@R: "First Last <first.last@example.com> [aut, cre]"
+## Description: What the package does (paragraph)
+## Depends: R (>= 3.1.1)
+## License: What license is it under?
+## LazyData: true
+## Adding Rstudio project file to test
+```
+
+```r
+list.files("test")
+```
+
+```
+## [1] "DESCRIPTION" "man"         "R"
+```
+
+--- &twocol w1:30% w2:68%
 
 ## Create the Documentation
 
----
+***=left
+- Edit `.Rd` directly
+- `roxygen2`
+ - `roxygen2::roxygenize()`
+ - `devtools::document()`
+ - RStudio
 
+***=right
+
+```r
+#' Get r2
+#'
+#' This function takes two input vectors, runs a linear regression and returns
+#' the coeffecient of determination
+#'
+#' @param x The independent variable
+#' @param y The dependent variable
+#' @export
+get_r2<-function(x,y){
+  xlm<-lm(y~x)
+  xlm_summary<-summary(xlm)
+  return(xlm_summary$r.squared) 
+}
+```
+
+--- &twocol w1:30% w2:68%
+ 
 ## Fill out `DESCRIPTION`
 
- 
+***=left
+- Edit directly
+- `devtools::create_description()`
+
+***=right
+```
+Package: test
+Title: What the package does (short line)
+Version: 0.1
+Authors@R: "First Last <first.last@example.com> [aut, cre]"
+Description: What the package does (paragraph)
+Depends: R (>= 3.1.1)
+License: What license is it under?
+LazyData: true
+```
+
+---
+
+## Build the package
   
